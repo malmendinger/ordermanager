@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2014-05-03 20:33:22
+  description: MyString
+  customer_id: 1
+  status_id: MyString
+
+two:
+  date: 2014-05-03 20:33:22
+  description: MyString
+  customer_id: 1
+  status_id: MyString
