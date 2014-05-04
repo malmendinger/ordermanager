@@ -1,0 +1,20 @@
+<div>
+	<h2>Customers</h2>
+	
+	<table>
+	<% @customers.each do |customer| %>
+		<tr>
+			<td><%= customer.name %></td>
+			<td>
+				<%= link_to "Delete", customer, method: :delete %> | 
+				<%= link_to 'Edit', edit_customer_path(customer) %> | 
+				<%= link_to 'Show', customer_path(customer) %>
+			</td>
+		<tr>
+	<% end %>
+		<tr>
+			<td><%= link_to 'Add Customer', new_customer_path %></td>
+		</tr>
+	</table>
+
+</div>

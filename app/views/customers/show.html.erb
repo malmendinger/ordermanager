@@ -1,0 +1,5 @@
+<div>
+	<p>ID: <%= @customer.id %></p>
+	<p>Name: <%= @customer.name %></p>
+	<span><%= link_to "< All customers", customers_path %> | <%= link_to "Delete", @customer, method: :delete %> | <%= link_to "Edit", edit_customer_path(@customer) %></span>
+</div>
