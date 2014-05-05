@@ -1,0 +1,10 @@
+<div>
+	<%= form_for(@order) do |f| %>
+		<%= f.label :date, 'Order Date: ' %>
+		<%= f.datetime_field :date %>
+		<br />
+		<%= f.label :description, 'Order Description' %><br />
+		<%= f.text_area :description %>
+		<br />
+	<% end %>
+</div>
