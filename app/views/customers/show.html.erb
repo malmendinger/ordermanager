@@ -1,5 +1,21 @@
-<div>
-	<p>ID: <%= @customer.id %></p>
-	<p>Name: <%= @customer.name %></p>
-	<span><%= link_to "< All customers", customers_path %> | <%= link_to "Delete", @customer, method: :delete %> | <%= link_to "Edit", edit_customer_path(@customer) %></span>
+<div class="small-8 small-centered columns">
+	<h2>Customer Info</h2>
+	<table>
+		<tbody>
+			<tr>
+				<td width="100">ID:</td><td width="250"><%= @customer.id %></td>
+			</tr>
+			<tr>
+				<td width="100">Name:</td><td width="250"><%= @customer.name %></td>
+			</tr>
+			<tr>
+				<td width="100">Created:</td><td width="250"><%= @customer.created_at %></td>
+			</tr>
+		</tbody>
+	</table>
+	<ul class="button-group radius">
+		<li><%= link_to "Back", customers_path, class: 'button small' %></li>
+		<li><%= link_to "Delete", @customer, method: :delete, class: 'button alert small' %></li>
+		<li><%= link_to "Edit", edit_customer_path(@customer), class: 'button success small' %></li>
+	</ul>
 </div>

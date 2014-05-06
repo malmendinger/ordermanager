@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Lighthouse IT Solutions Order Manager" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -12,8 +12,25 @@
   </head>
 
   <body>
-
-    <%= yield %>
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><%= link_to 'Lighthouse IT Solutions Order Tracker', :root %></h1>
+          </li>
+        </ul>
+        <section class="top-bar-section">
+          <ul class="right">
+            <li class="has-dropdown">
+              <a href="#">Modules</a>
+              <ul class="dropdown">
+                <li><%= link_to 'Orders', orders_path %></li>
+                <li><%= link_to 'Customers', customers_path %></li>
+                <li><%= link_to 'Distributors', distributors_path %></li>
+      </nav>
+    
+    <div class="row">
+      <%= yield %>
+    </div>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

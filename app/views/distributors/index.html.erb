@@ -1,9 +1,17 @@
-<div>
+<div class="small-8 small-centered columns">
+	<h2>Distributors</h2>
 	<table>
-	<% @distributors.each do |distributor| %>
-		<tr>
-			<td><%= distributor.name %></td>
-		</tr>
-	<% end %>
+		<tbody>
+		<% @distributors.each do |distributor| %>
+			<tr>
+				<td width="400"><%= distributor.name %></td>
+			</tr>
+		<% end %>
 	</table>
+	<a href="#" class="button small radius" data-reveal-id="addDistributor">Add Distributor</a>
+</div>
+
+<div id="addDistributor" class="reveal-modal" data-reveal>
+	<h3>Add New Distributor</h3>
+	<%= render partial: 'form' %>
 </div>

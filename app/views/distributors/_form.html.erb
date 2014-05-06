@@ -1,0 +1,8 @@
+<%= form_for(@distributor) do |f| %>
+	<%= f.label :name, 'Distributor Name: ' %>
+	<%= f.text_field :name %>
+	<ul class="button-group radius">
+		<li><%= f.submit class: 'button small success radius' %></li>
+		<li><%= link_to 'Nevermind', distributors_path, class: 'button small secondary radius' %></li>
+	</ul>
+<% end %>

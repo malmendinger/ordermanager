@@ -1,6 +1,9 @@
 class CustomersController < ApplicationController
 	def index
 		@customers = Customer.all
+		@customer = Customer.new
+
+		render 'no_customers' and return if Customer.count == 0
 	end
 
 	def show
@@ -18,7 +21,7 @@ class CustomersController < ApplicationController
 	def create
 		@customer = Customer.create(customer_params)
 
-		redirect_to customer_path(@customer), notice: "Customer created successfully!"
+		redirect_to customers_path(), notice: "Customer created successfully!"
 	end
 
 	def update
